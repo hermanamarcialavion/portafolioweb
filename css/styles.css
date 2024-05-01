@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/*///////CONTENEDOR/////////*/
+.wrapper{ /*aquí se define el tamaño del contenedor, el color y color de las letras del h2*/
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe4ec;
+  color:#fa8fb1; 
+}
+
+/*//////////ACOMODANDO LOS ELEMENTOS DE MENÚ//////////*/
+.navbar, .title__network{ /*navegador*/
+display: flex; /*los elementos de menú se ponen uno al lado del otro*/
+justify-content: space-between;
+padding: 2em; /*es una propiedad o relleno que se crea alrededor del contenido de un elemento dentro de los bordes definidos y sirve para dar formato y diseño a una página web*/
+}
+
+/*///////////ALINEANDO EL NOMBRE CON EL MENÚ///////////*/
+.brand{
+  margin-top:-7px;
+}
+/*/////////////CAMBIANDO DE COLOR EL DANI////////*/
+.brand span{ /*define color de la plabra Dani que está encerrada en el span dentro de la clase brand*/
+color: #ed6c95;
+}
+
+.perfil{
+  margin-left: 5em;
+}
+/*////////// SEPARANDO LOS ELEMENTOS DE MENÚ ENTRE ELLOS///////////*/
+.menu {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+/*////////////QUITANDO LOS PREDET DE LI//////////*/
+.menu, .title__network li{ /*Cuando hacemos una lista al que se le aplica un flex aparecen bolitas predeterminadas, con list-style se le quitan.*/
+  list-style:none;
+}
+/*/////////// DANDOLE ESTILO AL MENÚ///////////*/
+.menu a{ /*se define el color del contendo dentro de las a y se le quita el subrayado*/
+  color: #c78ca0;
+  text-decoration: none;
+  font-weight: bold; /*negrita*/
+  padding: 10px 20px; /*define el tamaño del recuadro de color del hover donde 10px es alto y 20px ancho*/
+}
+
+.title__network a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff1695;
+}
+.menu a:hover{
+  background-color: #82659d;
+  color: #fdc9da;
+  border-radius: 5px;
+  transition: ease-in .3s;
+}
+/*//////////ACOMODANDO EL CONTENIDO DE MAIN//////////*/
+.main{ 
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid; /*Este elemento convierte en una cuadricula invisible al contenido dentro de main. Casi igual a los elementos flex*/
+  grid-template-columns: repeat(2,1fr); /*esta instrucción define el tamaño de las columnas*/
+  align-items: center; /*alineado al centro*/
+}
+
+h1{
+  font-size: 3em;
+}
+
+.presentacion{
+  color: #2e2c39;
+  font-size: 1em;
+  font-weight:bold; /*remarcar letro del parrafo de presentación*/
+}
+
+span{ /*span dentro de h1*/
+  color: #ed6c95;
+}
+
+.descarga{
+  padding: 10px 20px; /*agranda botón con 10 de ancho y 20 de largo*/
+  background-color: #ed6c95;
+  color: #E9EDF6;
+  border: none; /*quitar borde predet*/
+  border-radius: 20px; /*redondear esquinas*/
+  margin-top: 10px; /*para que se despegue del texto de arriba*/
+  cursor: pointer; /*para poner la manita de selección*/
+}
+
+.descarga:hover{
+  background-color:#82659d;
+}
+/*/////////EDITANDO LA FOTO DE PRESENTACIÓN, aquí se les puede poner bordes y editarlos//////////*/
+.main img{
+  width: 410px;
+}
+
+
+/*///////AQUÍ EMPIEZA EL SOBRE MÍ//////*/
+
+/*PREDISPONIENDO EL ESPACIO PARA LOS ELEMENTOS////////*/
+.about{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center; /*centra el texto*/
+}
+
+/*/////////ACOMODANDO LA IMAGEN//////////*/
+.about img{
+  width: 100%;
+  grid-column: 1/5; 
+}
+
+.about-info {
+  grid-column: 5/10;
+  padding: 3em;
+}
+
+.about-info h2{
+  font-size: 3em;
+  color: #ed6c95;
+  font-style: italic;
+}
+
+.about p{
+  font-weight: bold;
+  color: #c05275;
+  margin-top: 2.5em; /*despega el texto del h2*/
+  margin-bottom: 1em; /*establece el espacio requerido en la parte inferior del elemento*/
+}
+
+/*///////////PORTAFOLIO///////////*/
+
+/*el background de .portafolio comparte características con .wrapped*/
+
+.portafolio{
+  background-color:  #ffe4ec;
+  color: #fa8fb1;
+}
+
+.portfolio-headings{ /*acomodo de */
+  width: 100vw;
+  justify-content: center;
+  padding: 5em;
+}
+.divisor{ /*rayita*/
+  height: 2px;
+  width: 160px;
+  background-color: #ed6c95;
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+
+.portfolio-headings h2{ /*cambio de tamaño de letra de Mi portafolio*/
+  font-size: 2.5em;
+}
+
+.portafolio .contenedor{
+  width: 80vw;
+  height: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  color: #ed6c95;
+}
+
+.card{ /* dimensiones y color del bloque debajo de la imagen*/
+  width: 300px;
+  height: 350px;
+  color: #ffe4ec;
+  background-color: #ff1695;
+  margin: 3px;
+}
+
+.card__img{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/decod_print.png);
+  background-size:cover;
+}
+
+.card__img2{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/forca2_print.png);
+  background-size:cover;
+}
+
+.card__img3{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/forca_print.png);
+  background-size:cover;
+}
+
+.card__img4{
+  width: 100%;
+  height: 150px;
+  background-image: url(../img/secretcode_print.png);
+  background-size:cover;
+}
+
+.card__title{
+  padding: 20px;
+}
+
+.link-del-proyecto{
+  display: flex;
+  justify-content: space-evenly; /*esta instrucción da espacios equitativos entre cada elemento*/
+}
+
+.link-del-proyecto a{
+  color:#ff1695;
+  text-decoration: none;
+}
+
+.link-del-proyecto i{
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.card .project-details{ /*espaciado del botón*/
+margin: 0 auto; /*centrar el texto del botón*/
+margin: 1em; /*dimensiones del botón*/
+width: 35%;
+}
+
+.card .project-details a{
+  text-decoration: none;
+  color: #ffe4ec;
+}
+/*/////////////SECCION DE CONTACTOS/////*/
+
+.contactos{
+  padding: 3em;
+  margin: 0 auto;
+}
+
+.contact-headings h2{
+  font-size:3em;
+  color:#ed6c95;
+}
+
+.contact-form h4{
+font-size: 2em;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin-top: 2em;
+  color:#ff1695;
+  border: none;
+}
+
+.form input{
+  padding: 10px 20px;
+  margin-bottom: none;
+  border: none;
+  border-bottom: 1px solid;
+  color: #ff1695;
+}
+
+.form textarea{
+  height: 150px;
+  background: none;
+  color: #ff1695;
+  padding: 1.5em;
+  margin-top: 5px;
+  border: 2px solid #ff1695;
+}
+
+.btn-sumit{
+  margin: 1em;
+  text-transform: uppercase;
+  padding: 10px 20px; /*agranda botón con 10 de ancho y 20 de largo*/
+  background-color: #ed6c95;
+  color: #E9EDF6;
+  border: none; /*quitar borde predet*/
+  border-radius: 20px; /*redondear esquinas*/
+  margin-top: 10px; /*para que se despegue del texto de arriba*/
+  cursor: pointer; /*para poner la manita de selección*/
+}
+
+.btn-sumit:hover{
+  background-color:#82659d;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+}
+
+.footer-content h2,h5{
+  align-items: center;
+}
